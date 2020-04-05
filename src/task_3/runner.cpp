@@ -4,8 +4,6 @@
 #include <cmath>
 #include <random>
 
-#define 4_degrees 0.0698123
-
 int main(int argc, char **argv) {
 
   ros::init(argc, argv, "runner");
