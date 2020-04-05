@@ -1,2 +1,2 @@
 string runner_id
-Point position
+geometry_msgs/Point position

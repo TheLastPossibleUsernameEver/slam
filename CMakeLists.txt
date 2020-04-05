@@ -135,14 +135,23 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 
-add_executable(task1_runner src/task_1/runner.cpp)
-target_link_libraries(task1_runner
+add_executable(task2_runner src/task_2/runner.cpp)
+target_link_libraries(task2_runner
         ${catkin_LIBRARIES}
         )
-add_executable(task1_observer src/task_1/observer.cpp)
-target_link_libraries(task1_observer
+add_executable(task2_observer src/task_2/observer.cpp)
+target_link_libraries(task2_observer
         ${catkin_LIBRARIES}
         )
+add_executable(task3_runner src/task_3/runner.cpp)
+target_link_libraries(task3_runner
+	${catkin_LIBRARIES}
+	)
+add_executable(task3_observer src/task_3/observer.cpp)
+target_link_libraries(task3_observer
+	${catkin_LIBRARIES}
+	)
+
 #add_executable( src/slam_node.cpp)
 #add_executable( src/slam_node.cpp)
 #add_executable( src/slam_node.cpp)

@@ -4,7 +4,7 @@ import rospy
 from slam.msg import PointNamed
 
 def callback(runner_message):
-    rospy.loginfo("Runner's name is: %s, x: %f, y: %f, z: %f", 
+    rospy.loginfo("Runner's id is: %s, x: %f, y: %f, z: %f", 
             runner_message.runner_id, 
             runner_message.position.x, 
             runner_message.position.y, 
@@ -12,7 +12,7 @@ def callback(runner_message):
             
 def observer():
     rospy.init_node('observer', anonymous=True)
-    rospy.Subscriber("runner_position", PointNamed, callback)
+    rospy.Subscriber('runner_position', PointNamed, callback)
 
     rospy.spin()
 
