@@ -43,7 +43,7 @@ public:
 
     points.points.push_back(smoothed_position);
 
-    if (angleNearZero()) {
+    if (smoothed_position.x > 0.95 && smoothed_position.x < 1.05) {
       pub.publish(points);
       ROS_INFO("Published: %f, %f", smoothed_position.x, smoothed_position.y);
     }
@@ -57,10 +57,6 @@ private:
 
   visualization_msgs::Marker points;
   geometry_msgs::Point smoothed_position;
-
-  bool angleNearZero(){
-    return smoothed_position.x > 0.95 && smoothed_position.x < 1.05;
-  }
 };
 
 int main(int argc, char **argv) {
