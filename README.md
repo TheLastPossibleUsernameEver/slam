@@ -78,6 +78,6 @@
 
 Откройте 2 терминала, и введите в них:
 
-`$ rosrun slam src/task_4/runner.py`
+`$ rosrun slam src/task_4/runner.py <n>`, где n - число Runner-ов.
 
 `$ rosrun slam src/task_4/observer.py`
