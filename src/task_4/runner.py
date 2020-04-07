@@ -15,6 +15,10 @@ def runner():
 
     runner_list = []
 
+    if len(sys.argv) == 1:
+        rospy.logerr("Please, provide number of Runners")
+        sys.exit()
+
     runner_list_size = sys.argv[1]
 
     rospy.loginfo("static fields initialized")
